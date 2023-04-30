@@ -68,6 +68,9 @@ Rails.application.configure do
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
 
+  # NOTE(Raj): Added for devise gem.
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # NOTE(Raj): Bullet gem configuration - https://github.com/flyerhzm/bullet.
   config.after_initialize do
     Bullet.enable = true
